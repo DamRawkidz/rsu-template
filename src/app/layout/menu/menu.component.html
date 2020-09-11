@@ -1,0 +1,64 @@
+<div class="container_menu">    
+    <div class="logo" [ngStyle]="{'justify-content': isExpandMenu ? '':'center'}">
+        <div class="rsu_text" [hidden]="!isExpandMenu">RSU</div>
+        <button mat-icon-button (click)="toggleMenu()">
+            <mat-icon svgIcon="table_rows"></mat-icon>
+        </button>
+    </div>
+    <div class="information" *ngIf="isExpandMenu">
+         <span class="username_text">UserName Admin</span>
+         <span class="email_text">Mail@gmail.com</span>
+         <img class="user_img" src="assets/images/user.png" alt="">
+    </div>
+    <div class="menu_bg" *ngIf="isExpandMenu">
+        <span>MENU</span>
+    </div>
+    <mat-accordion *ngIf="isExpandMenu">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="color: white;">
+                จัดการหอพัก
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <div class="backgound_color_menu">
+                    <ul class="list_menu">
+                        <div routerLink="/menu/list-booking" [routerLinkActive]="'menu_item'" >
+                            <li>รายการจองหอพัก</li>
+                        </div>
+                        <div routerLink="/menu/guest" [routerLinkActive]="'menu_item'">
+                            <li>รายชื่อผู้เข้าพัก</li>
+                        </div>
+                        <div routerLink="/menu/check-out" [routerLinkActive]="'menu_item'">
+                            <li>Check Out</li>
+                        </div>
+                        <div routerLink="/menu/room-key" [routerLinkActive]="'menu_item'">
+                            <li>กุญแจ</li>
+                        </div>
+                    </ul>
+                </div>
+              </ng-template>
+          </mat-expansion-panel>
+    </mat-accordion>
+    <br>
+    <!-- report -->
+    <mat-accordion color='primary' *ngIf="isExpandMenu">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="color: white;">
+                รับ-ส่งพัสดุภายใน
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <div class="backgound_color_menu">
+                    <ul class="list_menu">
+                        <div routerLink="/menu/report-list-product" [routerLinkActive]="'menu_item'">
+                            <li>รับ-ส่งพัสดุภายใน</li>
+                        </div>
+                    </ul>
+                </div>
+              </ng-template>
+          </mat-expansion-panel>
+    </mat-accordion>
+    <!-- report -->
+</div>

@@ -1,0 +1,16 @@
+.container {
+    flex: 1;
+    display: flex;   
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.picture {
+    background: url('/assets/images/login-logo.jpg') no-repeat center; 
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    border-radius:0px
+}

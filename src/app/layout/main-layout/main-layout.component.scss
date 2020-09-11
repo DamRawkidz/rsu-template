@@ -1,0 +1,41 @@
+// .container {
+//     height: 100%;
+//     display: grid;
+//     grid-template-columns: 290px auto;
+//     grid-template-rows: 8% auto;
+// }
+
+// .expand_container {
+//     grid-template-columns: 100px auto;
+// }
+
+// .toolbar {
+//     grid-column-start: 2;
+//     grid-row-end: 2;
+// }
+
+// .menu {
+//     grid-column-start: 1;
+//     grid-row-end: span 2;
+// }
+
+// .content{
+//     padding: 24px;
+//     grid-column-start: 2;
+//     grid-row-start: 2;
+// }
+
+.container_content {
+    padding: 24px;
+}
+
+.container_menu {
+    height: 100%;
+    width: 290px;
+    transition: 0.3s;
+}
+
+.expandMenu {
+    width: 100px;
+    transition: 0.3s;
+}
